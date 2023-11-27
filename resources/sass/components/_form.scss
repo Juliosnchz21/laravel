@@ -1,0 +1,55 @@
+.form{
+    flex: 2;
+}
+
+.form-buttons{
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
+    height: 40px;
+}
+
+.form-clean-button button svg, .form-save-button button svg{
+    width: 2.5rem;
+}
+
+.form-clean-button button svg path, .form-save-button button svg path{
+    fill: $secondary-color;
+}
+
+.form-clean-button button:hover svg path, .form-save-button button:hover svg path{
+    fill: $hover-color;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    width: 49%;
+}
+
+.form-element-input *{
+    background-color: $tertiary-color;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: transparent;
+    padding: 0.5rem;
+    width: 90%;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
