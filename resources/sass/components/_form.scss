@@ -32,10 +32,10 @@ form{
 
 .form-element{
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1rem;
-    width: 49%;
 }
 
 .form-element-input *{

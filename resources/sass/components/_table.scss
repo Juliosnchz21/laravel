@@ -1,8 +1,46 @@
+.filter-bar{
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 0.2rem 0;
+    height: 40px;
+}
+
+
+.filter-button{
+    display: flex;
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.filter-button button svg{
+    width: 2rem;
+}
+
+.filter-button button svg path{
+    fill: $secondary-color;
+}
+
+.filter-button button:hover svg path{
+    fill: $hover-color;
+}
+
+
 .table{
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 1rem;
+}
+
+.table-record {
+    width: 80%;
+    margin-left: 60px;
 }
 
 .table-buttons{

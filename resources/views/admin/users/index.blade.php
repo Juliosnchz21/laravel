@@ -2,7 +2,26 @@
 
 @section('table')
     @component('admin.components.table-filter')
+        <form class="table-filter">
+          <div class="form-element">
+            <div class="form-element-label">
+              <label for="name">Nombre</label>
+            </div>
+            <div class="form-element-input">
+              <input type="text" name="name" id="name">
+            </div>
+          </div>
+          <div class="form-element">
+            <div class="form-element-label">
+              <label for="email">Correo electrónico</label>
+            </div>
+            <div class="form-element-input">
+              <input type="email" name="email" id="email">
+            </div>
+          </div>
+        </form>
     @endcomponent
+    @component('admin.components.table-buttons')@endcomponent
     <article class="table-record">
         <div class="table-buttons">
             <div class="edit-button">
@@ -119,6 +138,9 @@
             </ul>
         </div>
     </article>
+    <div class="table-paginations">
+        <span>  {{__('admin/pagination.total')}}</span>
+    </div>
 @endsection
 
 @section('form')
