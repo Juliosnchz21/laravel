@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Http\Requests\Admin\UserRequest;
+use Debugbar;
 
 class UserController extends Controller
 {
@@ -91,7 +92,6 @@ class UserController extends Controller
       $view = View::make('admin.users.index')
         ->with('users', $users)
         ->with('user', $this->user)
-        ->with('message', $message)
         ->renderSections();        
 
       return response()->json([
@@ -109,17 +109,17 @@ class UserController extends Controller
   public function edit(User $user)
   {
     try{
+
       $view = View::make('admin.users.index')
-      ->with('user', $user)
-      ->with('users', $this->user->where('active', 1)->get());   
-      
+      ->with('user', $user); 
+
       if(request()->ajax()) {
 
           $sections = $view->renderSections(); 
   
           return response()->json([
               'form' => $sections['form'],
-          ], 200);;
+          ], 200);
       }
               
       return $view;
